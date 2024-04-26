@@ -1,8 +1,5 @@
+#define _USE_MATH_DEFINES
 #include <Novice.h>
-<<<<<<< Updated upstream
-
-const char kWindowTitle[] = "学籍番号";
-=======
 #include <assert.h>
 #include <cmath>
 
@@ -270,7 +267,6 @@ void VectorScreenPrintf(int x, int y, const Vector3& vector3, const char* name) 
 }
 
 const char kWindowTitle[] = "GC2C_05_ソウ_イチョウ_MT3";
->>>>>>> Stashed changes
 
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
@@ -278,12 +274,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	// ライブラリの初期化
 	Novice::Initialize(kWindowTitle, 1280, 720);
 
-<<<<<<< Updated upstream
-=======
 	Vector3 rotate = {0.4f, 1.43f, -0.8f};
 	
 
->>>>>>> Stashed changes
 	// キー入力結果を受け取る箱
 	char keys[256] = {0};
 	char preKeys[256] = {0};
@@ -301,14 +294,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓更新処理ここから
 		///
 
-<<<<<<< Updated upstream
-=======
 		Matrix4x4 rotateXMatrix = MakeRotateXMatrix(rotate.x);
 		Matrix4x4 rotateYMatrix = MakeRotateYMatrix(rotate.y);
 		Matrix4x4 rotateZMatrix = MakeRotateZMatrix(rotate.z);
 		Matrix4x4 rotateXYZMatrix = Multiply(rotateXMatrix, Multiply(rotateYMatrix, rotateZMatrix));
 
->>>>>>> Stashed changes
 		///
 		/// ↑更新処理ここまで
 		///
@@ -317,15 +307,12 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓描画処理ここから
 		///
 
-<<<<<<< Updated upstream
-=======
 		MatrixScreenPrintf(0, 0, rotateXMatrix, "rotateXMatrix");
 		MatrixScreenPrintf(0, kRowHeight * 5, rotateYMatrix, "rotateYMatrix");
 		MatrixScreenPrintf(0, kRowHeight * 5 * 2, rotateZMatrix, "rotateZMatrix");
 		MatrixScreenPrintf(0, kRowHeight * 5 * 3, rotateXYZMatrix, "rotateXYZMatrix");
 
 
->>>>>>> Stashed changes
 		///
 		/// ↑描画処理ここまで
 		///
